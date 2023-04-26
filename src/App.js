@@ -6,13 +6,16 @@ import React from 'react'
 // import Services from './pages/Services'
 import Login from './pages/Login'
 import Home from './pages/Home'
+// import { Form } from 'react-router-dom'
+import Form from '../src/pages/Form'
 
 
 const App = () => {
-  const authenticated = true
+  // const authenticated = true
   return (
     <>
-    {authenticated ?  <Home /> :  <Login />}
+    {/* {authenticated ?  <Home /> :  <Login />} */}
+    <Form />
    
     
     </>
