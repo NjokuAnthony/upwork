@@ -3,19 +3,32 @@ import {useState} from 'react'
 
 const Form = () => {
     const [firstName, setName] = useState("")
+    const [lastName, setLastName] = useState("")
+    const [state, setState] = useState("")
+    const [userName, setUserName] = useState("")
+    const [city, setCity] = useState("")
+    const [zip, setZip] = useState("")
+
+
+    const handleSubmit =(events) => {
+        events.preventDefault();
+
+        const detail = [firstName, lastName, state, userName, city, zip]
+        console.log(detail)
+    }
   return (
     <div>
-        <form class="row g-3 needs-validation" novalidate>
+        <form class="row g-3 needs-validation" novalidate onSubmit={handleSubmit}>
   <div class="col-md-4">
     <label for="validationCustom01" class="form-label">First name</label>
-    <input type="text" class="form-control" id="validationCustom01" value={firstName} onChange={() => {}} required/>
+    <input type="text" class="form-control" id="validationCustom01" value={firstName} onChange={(events) => {setName(events.target.value)}} required/>
     <div class="valid-feedback">
       Looks good!
     </div>
   </div>
   <div class="col-md-4">
     <label for="validationCustom02" class="form-label">Last name</label>
-    <input type="text" class="form-control" id="validationCustom02" value="" required/>
+    <input type="text" class="form-control" id="validationCustom02" value={lastName} onChange={(events) => {setLastName(events.target.value)}}  required/>
     <div class="valid-feedback">
       Looks good!
     </div>
@@ -24,7 +37,7 @@ const Form = () => {
     <label for="validationCustomUsername" class="form-label">Username</label>
     <div class="input-group has-validation">
       <span class="input-group-text" id="inputGroupPrepend">@</span>
-      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required/>
+      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" value={userName} onChange={(events) => {setUserName(events.target.value)}} required/>
       <div class="invalid-feedback">
         Please choose a username.
       </div>
@@ -32,16 +45,18 @@ const Form = () => {
   </div>
   <div class="col-md-6">
     <label for="validationCustom03" class="form-label">City</label>
-    <input type="text" class="form-control" id="validationCustom03" required/>
+    <input type="text" class="form-control" id="validationCustom03" valu={city} onChange={(events) => {setCity(events.target.value)}} required/>
     <div class="invalid-feedback">
       Please provide a valid city.
     </div>
   </div>
   <div class="col-md-3">
     <label for="validationCustom04" class="form-label">State</label>
-    <select class="form-select" id="validationCustom04" required>
-      <option selected disabled value="">Choose...</option>
-      <option>...</option>
+    <select class="form-select" id="validationCustom04" value={state} onChange={(events) => {setState(events.target.value)}} required>
+      <option >PARIS</option>
+      <option>LAGOS</option>
+      <option>ABJ</option>
+      <option>LONDON</option>
     </select>
     <div class="invalid-feedback">
       Please select a valid state.
@@ -49,7 +64,7 @@ const Form = () => {
   </div>
   <div class="col-md-3">
     <label for="validationCustom05" class="form-label">Zip</label>
-    <input type="text" class="form-control" id="validationCustom05" required/>
+    <input type="text" class="form-control" id="validationCustom05" value={zip} onChange={(events) => {setZip(events.target.value)}} required/>
     <div class="invalid-feedback">
       Please provide a valid zip.
     </div>
@@ -73,4 +88,4 @@ const Form = () => {
   )
 }
 
-export default form
+export default Form
