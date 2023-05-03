@@ -17,7 +17,7 @@ const Form = () => {
         console.log(detail)
     }
   return (
-    <div>
+    <div className='justify-content-center p-5'>
         <form class="row g-3 needs-validation" novalidate onSubmit={handleSubmit}>
   <div class="col-md-4">
     <label for="validationCustom01" class="form-label">First name</label>

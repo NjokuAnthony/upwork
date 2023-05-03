@@ -27,7 +27,7 @@ const Footer = () => {
                     <li><h3>LINKS</h3></li>
                     <li> <a href="#">Home</a></li>
                     <li> <a href="#">Faeatures</a></li>
-                    <li> <a href="3">About Us</a></li>
+                    <li> <a href="#">About Us</a></li>
                     <li> <a href="#">Contact Us</a></li>
                 </ul>
             </div>
@@ -36,7 +36,7 @@ const Footer = () => {
                     <li><h3>SUPPORT</h3></li>
                     <li> <a href="#">FAQ</a></li>
                     <li> <a href="#">Help Center</a></li>
-                    <li> <a href="3">Security</a></li>
+                    <li> <a href="#">Security</a></li>
                     <li> <a href="#">Accounts</a></li>
                 </ul>
             </div>
@@ -45,7 +45,7 @@ const Footer = () => {
                     <li><h3>LEGAL</h3></li>
                     <li> <a href="#">Privacy Policy</a></li>
                     <li> <a href="#">Term and Conditions</a></li>
-                    <li> <a href="3">Security</a></li>
+                    <li> <a href="#">Security</a></li>
                     <li> <a href="#">Accounts</a></li>
                 </ul>
             </div>
